@@ -40,10 +40,7 @@ jobs:
 
       - name: Trivy FS Scan
         run: |
-          trivy fs \
-            --scanners secret \
-            --format json \
-            -o fs-report.json .
+          trivy fs --scanners secret .
 
       - name: Install Gitleaks
         run: |
